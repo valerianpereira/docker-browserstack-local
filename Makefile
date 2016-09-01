@@ -6,6 +6,8 @@ help: ## Prints this help.
 
 build: ## Builds browserstack-local
 	docker build -t quay.io/typeform/browserstack-local:${VERSION} .
+	docker tag quay.io/typeform/browserstack-local:${VERSION} quay.io/typeform/browserstack-local:latest
 
 push:  ## Pushes browserstack-local
 	docker push quay.io/typeform/browserstack-local:${VERSION}
+	docker push quay.io/typeform/browserstack-local:latest
